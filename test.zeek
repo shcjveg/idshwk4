@@ -24,7 +24,6 @@ event http_reply(c: connection, version: string, code: count, reason: string)
 			}
 			if(alertcount>2 && (alertcount/allcount) > 0.2 && uricount/alertcount > 0.5){
 				print fmt("%s is a scanner with %.0f scan attempts on %.0f urls",address,alertcount,uricount);
-				print alertcount,uricount;
 			}
 		}
 		codeTable = table();
